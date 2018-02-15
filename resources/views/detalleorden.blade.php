@@ -9,18 +9,18 @@
         <div class="page">
             <div class="table-responsive">
                 <h3>Datos del Cliente</h3>
-                <table class="table table-strip table-hover table-bordered">
+                <table class="table table-striped table-hover table-bordered">
                     <tr>
-                        <td>Nombre:</td><td>{{Auth::user()->name." ".Auth::user()->apellido }}</td>
+                        <td><b>Nombre:</b></td><td>{{Auth::user()->name." ".Auth::user()->apellido }}</td>
                     </tr>
                     <tr>
-                        <td>Usuario:</td><td>{{Auth::user()->user }}</td>
+                        <td><b>Usuario:</b></td><td>{{Auth::user()->user }}</td>
                     </tr>
                     <tr>
-                        <td>Correo:</td><td>{{Auth::user()->email }}</td>
+                        <td><b>Correo:</b></td><td>{{Auth::user()->email }}</td>
                     </tr>
                     <tr>
-                        <td>Direccion:</td><td>{{Auth::user()->direccion }}</td>
+                        <td><b>Direccion:</b></td><td>{{Auth::user()->direccion }}</td>
                     </tr>
 
 
@@ -28,7 +28,7 @@
             </div>
             <div class="table-responsive">
                 <h3>Datos del Pedido</h3>
-                <table class="table table-strip table-hover table-bordered">
+                <table class="table table-striped table-hover table-bordered">
                     <tr>
                         <th>Producto</th>
                         <th>Precio</th>
