@@ -69,5 +69,15 @@ public function mas(Producto $producto){
         return $total;
     }
 
+    public function ordendetalle(){
+        if(count(\Session::get('car')) <= 0){
+            return redirect()->route('index');
+        }
+        $model=\Session::get('car');
+        $total= $this->total();
+        return view('detalleorden',['model'=>$model,'total'=>$total]);
+    }
+
+
 
 }

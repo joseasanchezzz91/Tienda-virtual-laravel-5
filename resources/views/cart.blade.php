@@ -39,7 +39,7 @@
        @endif
         <div class="row">
             <div class="container-fluid"><a href="/index" class="btn btn-outline-danger">Regresar</a>
-          <a href="" class="btn btn-outline-primary">Continuar</a></div>
+          <a href="{{route('detalle-orden')}}" class="btn btn-outline-primary">Continuar</a></div>
         </div>
     </div>
 @stop

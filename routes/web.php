@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 //Route::resource('/productos','ProductoController');
-Route::get('/index','ProductoController@index');
+Route::get('index',['as'=>'index','uses'=>'ProductoController@index']);
 Route::get('producto/{slug}',['as'=>'producto_detalle','uses'=>'ProductoController@show']);
 
 Route::get('cart/show',['as'=>'cart-show','uses'=>'CartController@show']);
@@ -38,3 +38,5 @@ Route::get('cart/down/{producto}',['as'=>'cart-menos','uses'=>'CartController@me
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('detalle-orden',['middleware'=>'auth','as'=>'detalle-orden','uses'=>'CartController@ordendetalle']);
