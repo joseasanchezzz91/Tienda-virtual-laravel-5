@@ -40,3 +40,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('detalle-orden',['middleware'=>'auth','as'=>'detalle-orden','uses'=>'CartController@ordendetalle']);
+
+//rutas de paypal
+//enviamos pedido
+Route::get('payment', array('as' => 'payment','uses' => 'PaypalController@postPayment',));
+//responde pedido
+Route::get('payment/status', array('as' => 'payment.status','uses' => 'PaypalController@getPaymentStatus',));

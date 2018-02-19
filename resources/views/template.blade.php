@@ -13,6 +13,10 @@
     <title>@yield('title','My tienda Laravel')</title>
 </head>
 <body>
+@if(\Session::has('message'))
+    @include('message.message')
+@endif
+
 @include('cabeceraypie.nav')
 @yield('content')
 
